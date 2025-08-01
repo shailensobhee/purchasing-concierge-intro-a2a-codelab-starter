@@ -18,7 +18,7 @@ from a2a_server.server import A2AServer
 from a2a_types import AgentCard, AgentCapabilities, AgentSkill, AgentAuthentication
 from a2a_server.push_notification_auth import PushNotificationSenderAuth
 from task_manager import AgentTaskManager
-from agent import PizzaSellerAgent
+from a2a_pizza_agent import PizzaSellerAgent
 import click
 import logging
 from dotenv import load_dotenv
