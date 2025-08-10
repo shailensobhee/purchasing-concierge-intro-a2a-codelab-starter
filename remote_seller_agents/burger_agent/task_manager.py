@@ -30,7 +30,8 @@ from a2a_types import (
     InvalidParamsError,
 )
 from a2a_server.task_manager import InMemoryTaskManager
-from agent import BurgerSellerAgent
+# from agent import BurgerSellerAgent
+from a2a_burger_agent import BurgerSellerAgent
 from a2a_server.push_notification_auth import PushNotificationSenderAuth
 import a2a_server.utils as utils
 from typing import Union
