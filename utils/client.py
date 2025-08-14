@@ -17,7 +17,7 @@ limitations under the License.
 import httpx
 import base64
 from typing import Any, AsyncIterable
-from a2a_types import (
+from utils.a2a_types import (
     AgentCard,
     SendTaskRequest,
     SendTaskResponse,

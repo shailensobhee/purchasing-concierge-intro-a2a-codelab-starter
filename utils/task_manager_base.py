@@ -16,7 +16,7 @@ limitations under the License.
 
 from abc import ABC, abstractmethod
 from typing import Union, AsyncIterable, List
-from a2a_types import (
+from utils.a2a_types import (
     Task,
     JSONRPCResponse,
     TaskIdParams,
@@ -46,7 +46,7 @@ from a2a_types import (
     TaskPushNotificationConfig,
     InternalError,
 )
-from a2a_server.utils import new_not_implemented_error
+from utils.utils import new_not_implemented_error
 import asyncio
 import logging
 

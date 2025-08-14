@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 
-from a2a_types import (
+from utils.a2a_types import (
     SendTaskRequest,
     TaskSendParams,
     Message,
@@ -29,11 +29,11 @@ from a2a_types import (
     PushNotificationConfig,
     InvalidParamsError,
 )
-from a2a_server.task_manager import InMemoryTaskManager
+from utils.task_manager_base import InMemoryTaskManager
 # from agent import BurgerSellerAgent
-from a2a_burger_agent import BurgerSellerAgent
-from a2a_server.push_notification_auth import PushNotificationSenderAuth
-import a2a_server.utils as utils
+from utils.a2a_burger_agent import BurgerSellerAgent
+from utils.push_notification_auth import PushNotificationSenderAuth
+import utils.utils as utils
 from typing import Union
 import logging
 

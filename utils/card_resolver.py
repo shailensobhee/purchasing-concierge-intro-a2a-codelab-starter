@@ -15,7 +15,7 @@ limitations under the License.
 """
 
 import httpx
-from a2a_types import (
+from utils.a2a_types import (
     AgentCard,
     A2AClientJSONError,
 )

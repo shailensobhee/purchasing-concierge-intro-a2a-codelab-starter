@@ -26,8 +26,8 @@
 
 ## Output
 
-![alt text](image_root_agent.png)
+![alt text](./assets/output/image_root_agent.png)
 
-![alt text](image_pizza_agent.png)
+![alt text](./assets/output/image_pizza_agent.png)
 
-![alt text](image_burger_agent.png)
+![alt text](./assets/output/image_burger_agent.png)
