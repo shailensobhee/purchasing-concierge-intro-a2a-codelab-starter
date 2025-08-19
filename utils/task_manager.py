@@ -30,22 +30,16 @@ from utils.a2a_types import (
     InvalidParamsError,
 )
 from utils.task_manager_base import InMemoryTaskManager
-# from agent import BurgerSellerAgent
-from utils.a2a_burger_agent import BurgerSellerAgent
 from utils.push_notification_auth import PushNotificationSenderAuth
 import utils.utils as utils
-from typing import Union
+from typing import Union, Any
 import logging
 
 logger = logging.getLogger(__name__)
 
 
 class AgentTaskManager(InMemoryTaskManager):
-    def __init__(
-        self,
-        agent: BurgerSellerAgent,
-        notification_sender_auth: PushNotificationSenderAuth,
-    ):
+    def __init__(self, agent: Any, notification_sender_auth: PushNotificationSenderAuth):
         super().__init__()
         self.agent = agent
         self.notification_sender_auth = notification_sender_auth
@@ -56,12 +50,12 @@ class AgentTaskManager(InMemoryTaskManager):
         task_send_params: TaskSendParams = request.params
         if not utils.are_modalities_compatible(
             task_send_params.acceptedOutputModes,
-            BurgerSellerAgent.SUPPORTED_CONTENT_TYPES,
+            self.agent.SUPPORTED_CONTENT_TYPES,
         ):
             logger.warning(
                 "Unsupported output mode. Received %s, Support %s",
                 task_send_params.acceptedOutputModes,
-                BurgerSellerAgent.SUPPORTED_CONTENT_TYPES,
+                self.agent.SUPPORTED_CONTENT_TYPES,
             )
             return utils.new_incompatible_types_error(request.id)
 
