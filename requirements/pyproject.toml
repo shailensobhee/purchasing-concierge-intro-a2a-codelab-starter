@@ -18,7 +18,10 @@ dependencies = [
     "ollama",
     "openai",
     "yfinance",
-    "dotenv"
+    "dotenv",
+    "crewai>=0.175.0",
+    "langchain-ollama>=0.3.7",
+    "langgraph>=0.6.6",
 ]
 
 [tool.hatch.build.targets.wheel]
